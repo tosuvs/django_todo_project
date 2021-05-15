@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Base</title>
 </head>
 <body>
 
 {% if user.is_authenticated %}
 
     Logged In as {{ user.username }}
+
+    <a href="{% url 'createtodo' %}">Create</a>
+    <a href="{% url 'currenttodos' %}">Current</a>
+    <a href="{% url 'completedtodos' %}">Completed</a>
 
     <form action="{% url 'logoutuser' %}" method="POST">
     {% csrf_token %}
