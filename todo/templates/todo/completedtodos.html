@@ -10,12 +10,12 @@
 
 {% block content %}
 
-Completed
+    <h1>Completed</h1>
 
     <ul>
         {% for todo in todos %}
             <li>
-                <a href="{% url 'viewtodo' todo.id %}">
+                <a href="{% url 'viewtodo' todo.id %}" style="color: black" class="h4" >
                     {% if todo.important %}
                         <b>
                         {{ todo.title }}

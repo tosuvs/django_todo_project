@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Create</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
 
@@ -10,17 +11,22 @@
 
 {% block content %}
 
-<h1>Create</h1>
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8 text-center">
+        <h1>Create</h1>
 
-<h2>{{ error }}</h2>
+        <h2>{{ error }}</h2>
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Create</button>
-</form>
+        <form method="POST">
+            {% csrf_token %}
+       <div class="h4">    {{ form.as_p }} </div>
+            <br>
+            <button type="submit" class="btn btn-outline-dark btn-lg">Create</button>
+        </form>
 
 {% endblock %}
+</div>
+    </div>
 
 </body>
 </html>
